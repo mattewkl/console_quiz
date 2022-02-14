@@ -3,7 +3,8 @@ from sqlite3 import Error
 import re
 import time
 
-
+task = """"Поправить все на pep8 по возможности 
+"""
 def create_connection(db_file):
     """ create a database connection to the SQLite database
         specified by the db_file
@@ -311,7 +312,6 @@ def ask_question():
     theme_choice = f"""
         SELECT question_text, question_id 
         FROM {theme_list[theme_choice_num - 1]}"""
-    print(theme_choice)
     limit = int(input('Введите количество вопросов'))
     time.sleep(1)
     try:
@@ -531,4 +531,3 @@ def insert_questions_math():
     conn.close()
 
 
-ask_question()
